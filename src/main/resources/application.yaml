@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: order-service
+
+  r2dbc:
+    url: r2dbc:h2:mem:///orderdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+
+  sql:
+    init:
+      mode: always
+
+product-service:
+  base-url: http://localhost:8081
+
+logging:
+  level:
+    pe.angeloravello: DEBUG
